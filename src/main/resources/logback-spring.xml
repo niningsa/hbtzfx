@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Logback configuration. See http://logback.qos.ch/manual/index.html -->
+<configuration scan="true" scanPeriod="10 seconds">
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder charset="UTF-8">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 按照每天生成日志文件 -->
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${LOG_PATH}/hbtzfx.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!--日志文件输出的文件名 -->
+			<FileNamePattern>${LOG_PATH}/hbtzfx-%d{yyyy-MM-dd}.log.%i</FileNamePattern>
+			<MaxHistory>30</MaxHistory>
+			<timeBasedFileNamingAndTriggeringPolicy
+					class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<!-- or whenever the file size reaches 100MB -->
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<Pattern>%-15d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80}[%class:%line] - %msg%n</Pattern>
+			<charset>UTF-8</charset>
+			<immediateFlush>true</immediateFlush>
+		</encoder>
+	</appender>
+
+	<!-- project default level -->
+	<logger name="com.hbtzfx" level="DEBUG" />
+
+	<!-- 下面配置一些第三方包的日志过滤级别，用于避免刷屏 -->
+	<logger name="org.springframework" level="INFO" />
+	<logger name="org.apache" level="INFO" />
+
+
+
+	<springProfile name="dev">
+		<root level="INFO">
+			<appender-ref ref="CONSOLE" />
+			<appender-ref ref="FILE" />
+		</root>
+		<logger name="com.hbtzfx" level="DEBUG" />
+	</springProfile>
+	<springProfile name="test">
+		<!-- Logstash -->
+		<appender name="LOGSTASH" class="com.cwbase.logback.RedisAppender">
+			<host>${spring.redis.host}</host>
+			<port>${spring.redis.port}</port>
+			<database>${spring.redis.database}</database>
+			<password>${spring.redis.password}</password>
+			<timeout>${spring.redis.timeout}</timeout>
+			<key>logstash:redis:instudiolog</key>
+			<source>instudio</source>
+			<sourcePath>instudio</sourcePath>
+			<type>instudiolog</type>
+			<tags>instudiolog</tags>
+		</appender>
+		<appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+			<appender-ref ref="LOGSTASH" />
+		</appender>
+		<!-- root -->
+		<root level="INFO">
+			<appender-ref ref="CONSOLE" />
+			<appender-ref ref="FILE" />
+			<appender-ref ref="ASYNC" />
+		</root>
+	</springProfile>
+	<springProfile name="pro">
+		<!-- Logstash -->
+		<appender name="LOGSTASH" class="com.cwbase.logback.RedisAppender">
+			<host>${spring.redis.host}</host>
+			<port>${spring.redis.port}</port>
+			<database>${spring.redis.database}</database>
+			<password>${spring.redis.password}</password>
+			<timeout>${spring.redis.timeout}</timeout>
+			<key>logstash:redis:instudiolog</key>
+			<source>instudio</source>
+			<sourcePath>instudio</sourcePath>
+			<type>instudiolog</type>
+			<tags>instudiolog</tags>
+		</appender>
+		<appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+			<appender-ref ref="LOGSTASH" />
+		</appender>
+		<!-- root -->
+		<root level="INFO">
+			<appender-ref ref="CONSOLE" />
+			<appender-ref ref="FILE" />
+			<appender-ref ref="ASYNC" />
+		</root>
+	</springProfile>
+
+</configuration>
