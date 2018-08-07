@@ -67,7 +67,7 @@ $("#save").click(function() {
                     success: function (res) {
                         console.log(res);
                         if (res.code == 200) {
-                            alert("提交成功");
+                            alert("信息已提交.客服将在48小时内与您联系");
                             $("#save").removeClass("disabled");
                             $("#save").attr("disabled", false);
                             $('#myModal').modal('hide');

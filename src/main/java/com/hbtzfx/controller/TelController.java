@@ -50,7 +50,7 @@ public class TelController {
      * 响应验证码页面
      * @return
      */
-    @RequestMapping(value="/validateCode")
+    @GetMapping(value="/validateCode")
     public String validateCode(HttpServletRequest request, HttpServletResponse response) throws Exception{
         // 设置响应的类型格式为图片格式
         response.setContentType("image/jpeg");
@@ -67,7 +67,7 @@ public class TelController {
         return null;
     }
 
-    @RequestMapping(value="/validateCodes")
+    @GetMapping(value="/validateCodes")
     public Map validateCode(HttpServletRequest request) throws Exception {
         String code = request.getParameter("code");
         HttpSession session = request.getSession();

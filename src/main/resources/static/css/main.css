@@ -1,0 +1,68 @@
+#search{
+    width: 100%;
+    height: 600px;
+    text-align: center;
+
+}
+
+#search .searchs{
+    position: relative;
+    top: 250px;
+    font-size: 250px;
+}
+
+.searchs p {
+    font-size: 50px;
+    font-style:italic;
+    color: red;
+    margin-bottom: 100px;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+
+header{
+    background-image: url(../img/bg.jpg);
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+    background-attachment: fixed;
+    top: 0px;
+}
+
+#body{
+    background-image: url(../img/wei.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    height:364px;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #444;
+    text-align: center;
+    color: #F0F0F0;
+    position: absolute;
+    bottom: -10%;
+}
+
+footer div{
+    padding: 10px 0 0 0;
+    font-size: 16px;
+}
+
+/*@media (min-width: 1200px)*/
+input.span3 {
+    width: 256px;
+    height: 40px;
+}
+
+.input-append .add-on, .input-append .btn, .input-append .btn-group {
+    margin-left: -1px;
+    height: 50px;
+    width: 60px;
+}

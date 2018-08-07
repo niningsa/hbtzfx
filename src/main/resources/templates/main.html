@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>全球金融平台信息咨询</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -11,72 +11,24 @@
     <link href="docs/assets/css/bootstrap.css" rel="stylesheet">
     <link href="docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="docs/assets/css/docs.css" rel="stylesheet">
-    <link href="docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-    <style>
-        #search{
-            width: 100%;
-            height: 600px;
-            text-align: center;
+    <!--<link href="docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">-->
+    <link href="css/main.css" rel="stylesheet">
 
-        }
-
-        #search .searchs{
-            position: relative;
-            top: 250px;
-        }
-
-        html, body{
-            margin: 0;
-            padding: 0;
-        }
-
-        header{
-            background-image: url(img/bg.jpg);
-            /*background-repeat:no-repeat;*/
-            /*background-position:center;*/
-            /*height:638px;*/
-            /*background-size: 100% 150%;*/
-            filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
-            -moz-background-size:100% 100%;
-            background-size:100% 100%;
-            background-attachment: fixed;
-
-        }
-
-        #body{
-            background-image: url(img/wei.png);
-            background-repeat:no-repeat;
-            background-position:center;
-            height:364px;
-        }
-
-        footer{
-            width: 100%;
-            height: 100px;
-            background-color: #444;
-            text-align: center;
-            color: #F0F0F0;
-        }
-
-        footer div{
-            padding: 10px 0 0px 0;
-            font-size: 16px;
-        }
-    </style>
 </head>
 <body>
         <header>
             <div id="search">
                 <div class="searchs">
-                    <select class="span4" style="width: 100px;" id="searchType">
-                        <option value="全站">全站</option>
-                        <option value="监管机构">监管机构</option>
-                        <option value="信誉度">信誉度</option>
-                    </select>
+                    <p>全球金融平台信息咨询</p>
                     <div class="input-append">
-                        <input type="text" class="span3" value="" id="desction">
+                        <select class="span4" style="width: 92px;height:  50px;" id="searchType">
+                            <option value="全站">全站</option>
+                            <option value="监管机构">监管机构</option>
+                            <option value="信誉度">信誉度</option>
+                        </select>
+                        <input type="text" class="span3" value="" id="desction" placeholder="请输入平台名字">
                         <!--<a href="#myModal" data-toggle="modal" class="btn btn-warning">搜索</a>-->
-                        <button id="confSearch" class="btn btn-warning">搜索</button>
+                        <button id="confSearch" class="btn btn-warning"><i class="icon-search icon-white"></i></button>
                     </div>
                 </div>
             </div>
@@ -124,7 +76,7 @@
         <div id="body"></div>
         <footer>
             <div>常用监管机构： 英国FCA 瑞士FINMA 美国NFA 日本FSA 香港SFC 澳大利亚ASIC</div>
-            <div>本站使用凡科建站搭建</div>
+            <!--<div>本站使用凡科建站搭建</div>-->
         </footer>
 
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
