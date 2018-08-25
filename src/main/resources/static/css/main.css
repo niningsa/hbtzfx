@@ -47,7 +47,7 @@ footer{
     text-align: center;
     color: #F0F0F0;
     position: absolute;
-    bottom: -10%;
+    /*bottom: -10%;*/
 }
 
 footer div{
