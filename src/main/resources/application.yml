@@ -3,7 +3,7 @@ spring:
     active: dev
 
 server:
-  port: 58001
-  servlet:
-    context-path: /hbtzfx
+  port: 80
+#  servlet:
+#    context-path: /hbtzfx
 
