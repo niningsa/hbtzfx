@@ -1,0 +1,145 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+.bgimg {
+  position: relative;
+  top: 0;
+  background-image: url(../img/bg.png);
+  background-size: cover;
+  background-position: 50% 0;
+  height: 600px;
+  width: 100%;
+}
+h1 {
+  margin: 0;
+  text-align: center;
+  padding-top: 150px;
+}
+.serach {
+  position: absolute;
+  width: 450px;
+  left: 50%;
+  margin-left: -225px;
+  top: 300px;
+}
+.serach select {
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  text-align-last: center;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  padding: 0 1px;
+  border: 1px solid #dddddd;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.serach select option {
+  text-align: center;
+}
+.serach input {
+  display: block;
+  width: 300px;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 16px;
+  margin-left: 100px;
+  height: 50px;
+  border: 1px solid #dddddd;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  padding: 0 10px;
+}
+.serach div {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #faa732;
+  background-color: #faa732;
+  text-align: center;
+  line-height: 50px;
+}
+.serach div i {
+  text-align: center;
+  margin-top: 3px;
+}
+.grid .item {
+  float: left;
+  padding: 20px 0;
+}
+.grid .item img {
+  display: block;
+  margin: 0 auto;
+}
+.grid::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.footer {
+  height: 100px;
+  background-color: #444;
+  color: #F0F0F0;
+  text-align: center;
+}
+.footer div {
+  padding-top: 30px;
+}
+@media screen and (min-width: 480px) and (max-width: 960px) {
+  .grid .item {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 7200px) {
+  .grid .item {
+    width: 33.3%;
+  }
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("../img/glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+.icon-search {
+  background-position: -48px 0;
+}
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:focus > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > li > a:focus > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:focus > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"],
+.dropdown-submenu:focus > a > [class*=" icon-"] {
+  background-image: url("../img/glyphicons-halflings-white.png");
+}
