@@ -10,22 +10,23 @@
     <!-- <link href="docs/assets/css/bootstrap.css" rel="stylesheet"> -->
     <!-- <link href="docs/assets/css/bootstrap-responsive.css" rel="stylesheet"> -->
     <link rel="icon" href="../static/docs/assets/ico/favicon.ico" type="img/x-ico" />
+    <link rel="stylesheet" href="css/select2.css">
     <link rel="stylesheet" href="css/index.css">
 
 </head>
 
 <body>
 
+
     <div class="container">
         <div class="bgimg">
             <!-- <img src="img/bg.png" alt=""> -->
             <h1>全球金融平台信息咨询</h1>
             <div class="serach">
-                <select>
-                    <option value="0">0</option>
-                    <option value="0">0</option>
-                    <option value="0">0</option>
-                    <option value="0">0</option>
+                <select id="searchType">
+                    <option value="全站">全站</option>
+                    <option value="监管机构">监管机构</option>
+                    <option value="信誉度">信誉度</option>
                 </select>
                 <input type="text">
                 <div>
@@ -65,5 +66,18 @@
 
 
 </body>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+<script type="text/javascript">
+    //页面加载完成后初始化select2控件
+    $(function () {
+        $("#searchType").select2({
+            minimumResultsForSearch: -1
+        });
+    });
+</script>
+
 
 </html>
