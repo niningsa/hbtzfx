@@ -78,6 +78,7 @@ public class TelController {
             result.put("code", "500");
             result.put("msg", "验证码对应不上code=" + code + "  sessionCode=" + sessionCode);
         } else {
+            request.getSession().invalidate(); // 清空session
             result.put("code", "200");
             result.put("msg", "验证成功");
         }
