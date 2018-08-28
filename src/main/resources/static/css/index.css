@@ -102,6 +102,10 @@ h1 {
 .select2-container ul {
   background-color: #fff;
 }
+.select2-container ul li {
+  height: 40px;
+  line-height: 40px;
+}
 .grid {
   padding-bottom: 150px;
 }

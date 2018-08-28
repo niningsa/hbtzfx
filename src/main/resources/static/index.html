@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <!-- <link href="docs/assets/css/bootstrap.css" rel="stylesheet"> -->
-    <!-- <link href="docs/assets/css/bootstrap-responsive.css" rel="stylesheet"> -->
+    <link href="https://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link rel="icon" href="../static/docs/assets/ico/favicon.ico" type="img/x-ico" />
     <link rel="stylesheet" href="css/select2.css">
     <link rel="stylesheet" href="css/index.css">
@@ -17,10 +17,8 @@
 
 <body>
 
-
-    <div class="container">
+    <div class="container2">
         <div class="bgimg">
-            <!-- <img src="img/bg.png" alt=""> -->
             <h1>全球金融平台信息咨询</h1>
             <div class="serach">
                 <select id="searchType">
@@ -28,13 +26,12 @@
                     <option value="监管机构">监管机构</option>
                     <option value="信誉度">信誉度</option>
                 </select>
-                <input type="text">
-                <div>
+                <input type="text" id="desction" placeholder="请输入平台名字">
+                <div id="confSearch">
                     <i class="icon-search icon-white"></i>
                 </div>
             </div>
         </div>
-
 
         <div class="grid">
             <div class="item">
@@ -63,13 +60,52 @@
 
     </div>
 
-
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">认证信息</h3>
+        </div>
+        <div class="modal-body">
+            <div class="alert alert-block alert-error hidden">
+                <h4 class="alert-heading" id="err">sorry!</h4>
+            </div>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="userName">* 姓名：</label>
+                    <div class="controls">
+                        <input type="text" id="userName" name="userName" placeholder="请输入姓名">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="tellnumber">* 手机：</label>
+                    <div class="controls">
+                        <input type="text" id="tellnumber" name="tellnumber" placeholder="请输入手机">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="tellnumber">验证码：</label>
+                    <div class="controls">
+                        <input type="text" id="codes" name="codes" class="input-small" placeholder="验证码" />
+                        <!-- <img id="imgObjs" alt="验证码" src="tel/validateCode.jpg" onclick="changeImg()"/> -->
+                        <a href="#" onclick="changeImg()">换一张</a>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="btn btn-primary" id="save">确定</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
 </body>
 
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-
+<script src="https://cdn.bootcss.com/bootstrap/2.3.1/js/bootstrap-modal.min.js"></script>
+<script src="js/main.js"></script>
 <script type="text/javascript">
     //页面加载完成后初始化select2控件
     $(function () {
