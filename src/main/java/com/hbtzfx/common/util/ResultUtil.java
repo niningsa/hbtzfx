@@ -1,6 +1,5 @@
 package com.hbtzfx.common.util;
 
-import com.hbtzfx.common.ResultEnums;
 import com.hbtzfx.common.model.CommonResponse;
 
 /**

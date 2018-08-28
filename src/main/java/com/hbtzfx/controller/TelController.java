@@ -1,13 +1,14 @@
 package com.hbtzfx.controller;
 
-import com.hbtzfx.common.ValidateCode;
+import com.hbtzfx.common.model.CommonResponse;
+import com.hbtzfx.common.util.ResultUtil;
+import com.hbtzfx.common.util.ValidateCode;
 import com.hbtzfx.entity.TelDO;
 import com.hbtzfx.service.TelService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import org.thymeleaf.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,9 +23,16 @@ import java.util.Map;
 public class TelController {
     @Autowired private TelService telService;
 
-    @GetMapping("findTel")
-    public List<TelDO> findTel() {
-        return telService.findTel();
+    @GetMapping("getTelList")
+    public String findTel(@RequestParam(value = "currentPage", defaultValue = "1") int currentPage,
+                          @RequestParam(value = "pageSize", defaultValue = "5") int pageSize, Model model) throws Exception {
+        model.addAttribute("telList", 123123);
+        return "telMain";
+    }
+
+    @PostMapping("getTelLists")
+    public CommonResponse findTels(@RequestParam int currentPage, @RequestParam int pageSize) throws Exception {
+        return ResultUtil.success(telService.getTelList(currentPage, pageSize));
     }
 
     @GetMapping("saveTel")

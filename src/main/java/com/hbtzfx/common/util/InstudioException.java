@@ -1,7 +1,5 @@
 package com.hbtzfx.common.util;
 
-import com.hbtzfx.common.model.ResultEnums;
-
 /**
  * @Description: 自定义异常 ，继承runtimeException 利于事务回滚
  * @author NING.LI
