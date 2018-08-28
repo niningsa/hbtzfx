@@ -89,7 +89,7 @@
 }
 
 .select2-results__option {
-    padding: 6px;
+    padding: 0 6px;
     user-select: none;
     -webkit-user-select: none;
 }

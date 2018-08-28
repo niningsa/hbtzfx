@@ -99,6 +99,9 @@ h1 {
   text-align: center;
   margin-top: 3px;
 }
+.select2-container ul {
+  background-color: #fff;
+}
 .grid {
   padding-bottom: 150px;
 }

@@ -1,102 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>全球金融平台信息咨询</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
-
-    <!-- Le styles -->
-    <link href="docs/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link rel="icon" href="../static/docs/assets/ico/favicon.ico" type="img/x-ico" />
+    <link rel="stylesheet" href="css/select2.css">
+    <link rel="stylesheet" href="css/index.css">
 
 </head>
-<body>
-        <header>
-            <div id="search">
-                <div class="searchs">
-                    <p>全球金融平台信息咨询</p>
-                    <div class="input-append">
-                        <select class="span4" style="width: 92px;height:  50px;" id="searchType">
-                            <option value="全站">全站</option>
-                            <option value="监管机构">监管机构</option>
-                            <option value="信誉度">信誉度</option>
-                        </select>
-                        <input type="text" class="span3" value="" id="desction" placeholder="请输入平台名字">
-                        <!--<a href="#myModal" data-toggle="modal" class="btn btn-warning">搜索</a>-->
-                        <button id="confSearch" class="btn btn-warning"><i class="icon-search icon-white"></i></button>
-                    </div>
-                </div>
-            </div>
-        </header>
 
-        <!-- Modal -->
-        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="myModalLabel">认证信息</h3>
-            </div>
-            <div class="modal-body">
-                <div class="alert alert-block alert-error hidden">
-                    <h4 class="alert-heading" id="err">sorry!</h4>
+<body>
+
+
+    <div class="container">
+        <div class="bgimg">
+            <h1>全球金融平台信息咨询</h1>
+            <div class="serach">
+                <select id="searchType">
+                    <option value="全站">全站</option>
+                    <option value="监管机构">监管机构</option>
+                    <option value="信誉度">信誉度</option>
+                </select>
+                <input type="text" id="desction" placeholder="请输入平台名字">
+                <div id="confSearch">
+                    <i class="icon-search icon-white"></i>
                 </div>
-                <form class="form-horizontal">
-                    <div class="control-group">
-                        <label class="control-label" for="userName">* 姓名：</label>
-                        <div class="controls">
-                            <input type="text" id="userName" name = "userName" placeholder="请输入姓名">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="tellnumber">* 手机：</label>
-                        <div class="controls">
-                            <input type="text" id="tellnumber" name="tellnumber" placeholder="请输入手机">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="tellnumber">验证码：</label>
-                        <div class="controls">
-                            <input type="text" id="codes" name="codes" class="input-small" placeholder="验证码"/>
-                            <img id="imgObjs" alt="验证码" src="tel/validateCode" onclick="changeImg()"/>
-                            <a href="#" onclick="changeImg()">换一张</a>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="controls">
-                            <div class="btn btn-primary" id="save">确定</div>
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
-        <div id="body"></div>
-        <footer>
-            <div>常用监管机构： 英国FCA 瑞士FINMA 美国NFA 日本FSA 香港SFC 澳大利亚ASIC</div>
-            <!--<div>本站使用凡科建站搭建</div>-->
-        </footer>
 
-    <!--<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>-->
-    <script src="docs/assets/js/jquery.js"></script>
-    <!--<script src="docs/assets/js/google-code-prettify/prettify.js"></script>-->
-    <!--<script src="docs/assets/js/bootstrap-transition.js"></script>-->
-    <!--<script src="docs/assets/js/bootstrap-alert.js"></script>-->
-    <script src="docs/assets/js/bootstrap-modal.js"></script>
-    <!--<script src="docs/assets/js/bootstrap-dropdown.js"></script>-->
-    <!--<script src="docs/assets/js/bootstrap-scrollspy.js"></script>-->
-    <!--<script src="docs/assets/js/bootstrap-tab.js"></script>-->
-    <!--<script src="docs/assets/js/bootstrap-tooltip.js"></script>-->
-    <!--<script src="docs/assets/js/bootstrap-popover.js"></script>-->
-    <!--<script src="docs/assets/js/bootstrap-button.js"></script>-->
-    <!--<script src="docs/assets/js/bootstrap-collapse.js"></script>-->
-    <!--<script src="docs/assets/js/bootstrap-carousel.js"></script>-->
-    <!--<script src="docs/assets/js/bootstrap-typeahead.js"></script>-->
-    <!-- <script src="docs/assets/js/application.js"></script>     -->
-    <script src="js/main.js"></script>
+
+        <div class="grid">
+            <div class="item">
+                <img src="img/grid1.png" alt="">
+            </div>
+            <div class="item">
+                <img src="img/grid2.png" alt="">
+            </div>
+            <div class="item">
+                <img src="img/grid3.png" alt="">
+            </div>
+            <div class="item">
+                <img src="img/grid4.png" alt="">
+            </div>
+            <div class="item">
+                <img src="img/grid5.png" alt="">
+            </div>
+            <div class="item">
+                <img src="img/grid6.png" alt="">
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>常用监管机构： 英国FCA 瑞士FINMA 美国NFA 日本FSA 香港SFC 澳大利亚ASIC</div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">认证信息</h3>
+        </div>
+        <div class="modal-body">
+            <div class="alert alert-block alert-error hidden">
+                <h4 class="alert-heading" id="err">sorry!</h4>
+            </div>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="userName">* 姓名：</label>
+                    <div class="controls">
+                        <input type="text" id="userName" name = "userName" placeholder="请输入姓名">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="tellnumber">* 手机：</label>
+                    <div class="controls">
+                        <input type="text" id="tellnumber" name="tellnumber" placeholder="请输入手机">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="tellnumber">验证码：</label>
+                    <div class="controls">
+                        <input type="text" id="codes" name="codes" class="input-small" placeholder="验证码"/>
+                        <img id="imgObjs" alt="验证码" src="tel/validateCode" onclick="changeImg()"/>
+                        <a href="#" onclick="changeImg()">换一张</a>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="btn btn-primary" id="save">确定</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
 </body>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/2.3.1/js/bootstrap-modal.min.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+    //页面加载完成后初始化select2控件
+    $(function () {
+        $("#searchType").select2({
+            minimumResultsForSearch: -1
+        });
+    });
+</script>
+
 
 </html>

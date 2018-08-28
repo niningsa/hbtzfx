@@ -1,8 +1,11 @@
 spring:
   application:
     name: hbtzfx
-
-
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://cd-cdb-hycofijw.sql.tencentcdb.com:63827/tel
+    username: root
+    password: wsj@2018
 ####  thymeleaf配置   #######
   thymeleaf:
     cache: false
