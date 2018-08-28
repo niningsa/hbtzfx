@@ -69,7 +69,7 @@ public class TelController {
 
         HttpSession session = request.getSession();
 
-        ValidateCode vCode = new ValidateCode(120,40,5,100);
+        ValidateCode vCode = new ValidateCode(120,40,4,10);
         session.setAttribute("code", vCode.getCode());
         vCode.write(response.getOutputStream());
         return null;
