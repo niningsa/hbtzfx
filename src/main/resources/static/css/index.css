@@ -43,6 +43,26 @@ h1 {
 .serach select option {
   text-align: center;
 }
+.serach .select2 {
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  text-align-last: center;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  padding: 0;
+  border: 1px solid #dddddd;
+  border-right: none;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.serach .select2 span {
+  border: none;
+  outline: none;
+}
 .serach input {
   display: block;
   width: 300px;
@@ -51,11 +71,13 @@ h1 {
   font-size: 16px;
   margin-left: 100px;
   height: 50px;
+  line-height: 50px;
   border: 1px solid #dddddd;
-  border-left: none;
-  border-right: none;
   outline: none;
   padding: 0 10px;
+  border-right: 1px solid #dddddd !important;
+  border-radius: 0;
+  box-shadow: 0 0 0 0 #ffffff;
 }
 .serach div {
   box-sizing: border-box;
@@ -71,10 +93,17 @@ h1 {
   background-color: #faa732;
   text-align: center;
   line-height: 50px;
+  cursor: pointer;
 }
 .serach div i {
   text-align: center;
   margin-top: 3px;
+}
+.select2-container ul {
+  background-color: #fff;
+}
+.grid {
+  padding-bottom: 150px;
 }
 .grid .item {
   float: left;
@@ -90,13 +119,26 @@ h1 {
   clear: both;
 }
 .footer {
+  position: fixed;
   height: 100px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
   background-color: #444;
   color: #F0F0F0;
   text-align: center;
 }
 .footer div {
   padding-top: 30px;
+}
+@media screen and (min-width: 480px) and (max-width: 7200px) {
+  .select2-selection {
+    border-radius: 0 !important;
+  }
+  span {
+    height: 50px !important;
+    line-height: 50px !important;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 960px) {
   .grid .item {
@@ -106,6 +148,45 @@ h1 {
 @media screen and (min-width: 960px) and (max-width: 7200px) {
   .grid .item {
     width: 33.3%;
+  }
+}
+@media screen and (min-width: 240px) and (max-width: 480px) {
+  .bgimg {
+    height: 300px;
+  }
+  h1 {
+    padding-top: 80px;
+    font-size: 24px;
+  }
+  .serach {
+    width: 300px;
+    margin-left: -150px;
+    top: 150px;
+  }
+  .serach input {
+    width: 150px;
+  }
+  .serach * {
+    height: 40px !important;
+    line-height: 40px !important;
+  }
+  .grid {
+    padding-bottom: 100px;
+  }
+  .grid .item {
+    width: 50%;
+  }
+  .grid .item img {
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+  }
+  .footer {
+    font-size: 12px;
+    height: 80px;
+  }
+  .footer div {
+    padding-top: 20px;
   }
 }
 [class^="icon-"],
