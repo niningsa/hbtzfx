@@ -76,4 +76,17 @@ public class TelDO {
     public void setCreatedOn(Date createdOn) {
         this.createdOn = createdOn;
     }
+
+    @Override
+    public String toString() {
+        return "TelDO{" +
+                "telId=" + telId +
+                ", telnumber='" + telnumber + '\'' +
+                ", userName='" + userName + '\'' +
+                ", desction='" + desction + '\'' +
+                ", searchType='" + searchType + '\'' +
+                ", createdOnStr='" + createdOnStr + '\'' +
+                ", createdOn=" + createdOn +
+                '}';
+    }
 }

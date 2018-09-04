@@ -5,7 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-${telList}
-hello
+<!--<div th:text="${telList.telnumber}"></div>-->
+
+<table border="1px" width="100%">
+    <tr>
+        <th>用户名</th>
+        <th>手机</th>
+        <th>搜索内容</th>
+        <th>搜索范围</th>
+        <th>创建时间</th>
+    </tr>
+
+    <tr th:each="tel:${telList}">
+　　　　　<td th:text="${tel.userName}"></td>
+　　　　　<td th:text="${tel.telnumber}"></td>
+　　　　　<td th:text="${tel.desction}"></td>
+　　　　　<td th:text="${tel.searchType}"></td>
+　　　　　<td th:text="${tel.createdOnStr}"></td>
+        <!--<td th:text="${'$' + #numbers.formatDecimal(product.price, 1, 2)}">$123</td>-->
+        <!--<td th:text="${#dates.format(product.availableFrom, 'yyyy-MM-dd')}">2014-12-01</td>-->
+    </tr>
+</table>
 </body>
 </html>

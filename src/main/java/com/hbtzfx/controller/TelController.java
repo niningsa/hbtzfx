@@ -6,6 +6,7 @@ import com.hbtzfx.common.util.ValidateCode;
 import com.hbtzfx.entity.TelDO;
 import com.hbtzfx.service.TelService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -18,21 +19,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RestController
+//@RestController
 @RequestMapping("tel")
+@Controller
 public class TelController {
     @Autowired private TelService telService;
 
     @GetMapping("getTelList")
     public String findTel(@RequestParam(value = "currentPage", defaultValue = "1") int currentPage,
                           @RequestParam(value = "pageSize", defaultValue = "5") int pageSize, Model model) throws Exception {
-        model.addAttribute("telList", 123123);
+        model.addAttribute("telList", telService.getTelList(currentPage, pageSize).getList());
         return "telMain";
-    }
-
-    @PostMapping("getTelLists")
-    public CommonResponse findTels(@RequestParam int currentPage, @RequestParam int pageSize) throws Exception {
-        return ResultUtil.success(telService.getTelList(currentPage, pageSize));
     }
 
     @GetMapping("saveTel")
