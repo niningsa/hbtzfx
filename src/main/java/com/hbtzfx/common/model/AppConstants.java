@@ -21,7 +21,6 @@ public class AppConstants {
 	 */
 	public static final long SYSN_ERROR = 300;
 	public static final String SYSN_ERROR_MSG = "已无待同步的数据";
-
 	/**
 	 * 用户错误码----------------------------------------------------------------
 	 */
