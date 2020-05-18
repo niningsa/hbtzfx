@@ -5,7 +5,6 @@ import java.util.Map;
 
 /**
  * 常量类
- *
  */
 public class AppConstants {
 
